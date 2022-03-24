@@ -30,6 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	web.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true
 	web.vm.provider "virtualbox" do |vb|
 	  vb.memory = "2048"  
+	  config.vm.provision "file", source: "./home.html", destination: "/var/www/html/home.html"
 	end     
 
   	web.vm.synced_folder ".", "/var/www/html"  
@@ -47,9 +48,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		sudo a2enconf adminer.conf 
 		sudo service apache2 restart 
 		sudo rm /var/www/html/index.html
-		sudo cd /var/www/html
-		sudo curl https://github.com/viverr/M300-Services/blob/main/lb02/db_html.html -o filename index.html
-		sudo service apache2 restart 
+		sudo service apache2 reload
 	  echo '127.0.0.1 localhost webserver\192.168.2.99 datenbank-server' > /etc/hosts
 SHELL
 	end  
