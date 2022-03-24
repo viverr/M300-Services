@@ -46,7 +46,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		echo "Alias /adminer.php /usr/share/adminer/adminer.php" | sudo tee /etc/apache2/conf-available/adminer.conf
 		sudo a2enconf adminer.conf 
 		sudo service apache2 restart 
+		sudo 
 	  echo '127.0.0.1 localhost webserver\192.168.2.99 datenbank-server' > /etc/hosts
+	  exec "./db_php.php"
 SHELL
 	end  
  end
