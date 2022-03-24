@@ -1,5 +1,16 @@
 # Code Erklärung
 In diesem README wird die Funktion der Vagrant erklärt.
+
+## Inhaltsverzeichis
+1. [Die Repository Struktur](##Repository-Struktur)
+2. [Funktionen der Files](##Funktionen-der-Files)
+3. [Vagrant](##Vagrant)
+4. [db.sh](##db.sh)
+5. [Funktion der Code Teile - Vagrant](##Funktion-der-Code-Teile-[Vagrant])
+6. [Funktion der Code Teile - DB.SH](##Funktion-der-Code-Teile-[DB.SH])
+7. [Probleme die aufgetaucht sind](##Probleme-die-aufetaucht-sind)
+
+
 ## Repository Struktur
 Die Struktur des M300-Services/lb02 Repositories sieht folgendermassen aus:
 ```
