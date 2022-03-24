@@ -47,7 +47,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		sudo a2enconf adminer.conf 
 		sudo service apache2 restart 
 		sudo rm /var/www/html/index.html
-		sudo cp 
+		sudo cd /var/www/html
+		sudo curl https://github.com/viverr/M300-Services/blob/main/lb02/db_html.html -o filename index.html
+		sudo service apache2 restart 
 	  echo '127.0.0.1 localhost webserver\192.168.2.99 datenbank-server' > /etc/hosts
 SHELL
 	end  
