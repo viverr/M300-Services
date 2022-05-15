@@ -39,15 +39,19 @@ Das Skript löst die Umkonfiguration des Zeitservers aus und setzt es auf die *1
 
 ## Beispiel, wie es aussieht:
 - Die ```config_ntp.bat``` aufsuchen.
+
 ![](../lb03/bilder/config_file_finden.png)
 
 - Als Administrator ausführen!
+
 ![](../lb03/bilder/als%20_admin_oeffnen.png)
 
 - Windows setzt nun den NTP Container zum neuen Zeitserver
+
 ![](../lb03/bilder/cmd_screen_win.png)
 
 - Der Zeitserver ist nun auf den Container gesetzt! (Siehe *Zeitserver: 127.0.0.1:123*)
+
 ![](../lb03/bilder/zeitserver_eingesetellt.png)
 
 Wie man sieht ist das Einrichten des Dienstes sehr einfach gestaltet und verursacht keinerlei Probleme.
