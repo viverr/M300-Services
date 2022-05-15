@@ -40,7 +40,7 @@ if [ "$(check_container)" != "" ]; then
     $DOCKER rm "${CONTAINER_NAME}_orig" > /dev/null 2>&1
   fi
 
-  # finally, lets clean up old docker images
+  # old container cleanup
   $DOCKER rmi $($DOCKER images -q ${IMAGE_NAME}) > /dev/null 2>&1
 
 # no docker container found. start a new one.
